@@ -13,6 +13,42 @@ testWebP(function (support) {
       document.querySelector('body').classList.add('no-webp');
    }
 });
+//page animation
+const scrollElements = document.querySelectorAll('.js-scroll');
+const elementInView = (el, dividend = 1) => {
+   const elementTop = el.getBoundingClientRect().top;
+   return (
+      elementTop <=
+      (window.innerHeight || document.documentElement.clientHeight) / dividend
+   );
+};
+const elementOutofView = (el) => {
+   const elementTop = el.getBoundingClientRect().top;
+   return (
+      elementTop > (window.innerHeight || document.documentElement.clientHeight)
+   );
+};
+const displayScrollElement = (element) => {
+   element.classList.add('scrolled');
+};
+const hideScrollElement = (element) => {
+   element.classList.remove('scrolled');
+};
+const handleScrollAnimation = () => {
+   scrollElements.forEach((el) => {
+      if (elementInView(el, 1)) {
+         displayScrollElement(el)
+      } else if (elementOutofView(el)) {
+         hideScrollElement(el)
+      }
+   })
+}
+window.addEventListener('scroll', () => {
+   handleScrollAnimation();
+});
+window.addEventListener('load', () => {
+   handleScrollAnimation();
+});
 // burger
 if (document.querySelector('.body__burger')) {
    function burgerMenu() {
@@ -231,7 +267,7 @@ if (document.querySelector('.body__pokedex')) {
       })
    }
    burgerMenu1();
-   
+
    var modal = document.getElementsByClassName('modal__wrapper');
    var btn = document.getElementsByClassName("slide");
    var span = document.getElementsByClassName("modal__close");
@@ -348,7 +384,7 @@ if (document.querySelector('.body__pokedex')) {
       modal[8].style.display = "none";
    }
 
-   window.onclick = function (event) { 
+   window.onclick = function (event) {
       if (event.target == modal[0]) {
          modal[0].style.display = "none";
       }
