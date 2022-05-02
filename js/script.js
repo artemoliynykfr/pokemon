@@ -13,47 +13,46 @@ testWebP(function (support) {
       document.querySelector('body').classList.add('no-webp');
    }
 });
-// burger
-if (document.querySelector('.body__burger')) {
-   function burgerMenu() {
-      const burger = document.querySelector('.burger')
-      const menu = document.querySelector('.menu')
-      const logo = document.querySelector('.logo')
-      const body = document.querySelector('body')
-      burger.addEventListener('click', () => {
-         if (!menu.classList.contains('active')) {
-            menu.classList.add('active')
-            logo.classList.add('active')
-            burger.classList.add('active-burger')
-            body.classList.add('locked')
-         } else {
-            menu.classList.remove('active')
-            logo.classList.remove('active')
-            burger.classList.remove('active-burger')
-            body.classList.remove('locked')
-         }
-      })
-      window.addEventListener('resize', () => {
-         if (window.innerWidth > 767.98) {
-            menu.classList.remove('active')
-            logo.classList.remove('active')
-            burger.classList.remove('active-burger')
-            body.classList.remove('locked')
-         }
-      })
-   }
-   burgerMenu();
-   function fixedNav() {
-      const nav = document.querySelector('nav')
-      const breakpoint = 1
-      if (window.scrollY > breakpoint) {
-         nav.classList.add('fixed__nav')
+function burgerMenu() {
+   const burger = document.querySelector('.burger')
+   const menu = document.querySelector('.menu')
+   const logo = document.querySelector('.logo')
+   const body = document.querySelector('body')
+   burger.addEventListener('click', () => {
+      if (!menu.classList.contains('active')) {
+         menu.classList.add('active')
+         logo.classList.add('active')
+         burger.classList.add('active-burger')
+         body.classList.add('locked')
       } else {
-         nav.classList.remove('fixed__nav')
+         menu.classList.remove('active')
+         logo.classList.remove('active')
+         burger.classList.remove('active-burger')
+         body.classList.remove('locked')
       }
-   }
-   window.addEventListener('scroll', fixedNav)
+   })
+   window.addEventListener('resize', () => {
+      if (window.innerWidth > 767.98) {
+         menu.classList.remove('active')
+         logo.classList.remove('active')
+         burger.classList.remove('active-burger')
+         body.classList.remove('locked')
+      }
+   })
 }
+burgerMenu();
+function fixedNav() {
+   const nav = document.querySelector('nav')
+   const breakpoint = 1
+   if (window.scrollY > breakpoint) {
+      nav.classList.add('fixed__nav')
+   } else {
+      nav.classList.remove('fixed__nav')
+   }
+}
+window.addEventListener('scroll', fixedNav)
+// burger
+
 //
 if (document.querySelector('.body__legend')) {
    var swiper = new Swiper(".mySwiper", {
@@ -214,7 +213,7 @@ if (document.querySelector('.body__pokedex')) {
          clickable: true,
       },
    });
-   function burgerMenu() {
+   function burgerMenu1() {
       const burger = document.querySelector('.filter')
       const menu = document.querySelector('.pokedex__accordion')
       const body = document.querySelector('body')
@@ -230,7 +229,7 @@ if (document.querySelector('.body__pokedex')) {
          }
       })
    }
-   burgerMenu();
+   burgerMenu1();
    
    var modal = document.getElementsByClassName('modal__wrapper');
    var btn = document.getElementsByClassName("slide");
