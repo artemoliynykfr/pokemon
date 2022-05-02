@@ -49,8 +49,8 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
    handleScrollAnimation();
 });
-// burger
 if (document.querySelector('.body__burger')) {
+   // burger
    function burgerMenu() {
       const burger = document.querySelector('.burger')
       const menu = document.querySelector('.menu')
@@ -90,8 +90,8 @@ if (document.querySelector('.body__burger')) {
    }
    window.addEventListener('scroll', fixedNav)
 }
-//
 if (document.querySelector('.body__legend')) {
+   // swiper
    var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
       slidesPerView: 6,
@@ -208,6 +208,7 @@ if (document.querySelector('.body__legend')) {
    });
 }
 if (document.querySelector('.body__pokedex')) {
+   // accordion
    function accordion() {
       const items = document.querySelectorAll('.pokedex__accordion-header')
       items.forEach(item => {
@@ -225,7 +226,7 @@ if (document.querySelector('.body__pokedex')) {
       })
    }
    accordion()
-
+   // swiper
    new Swiper('.swiper-container', {
       direction: 'horizontal',
       loop: !1,
@@ -250,6 +251,7 @@ if (document.querySelector('.body__pokedex')) {
          clickable: true,
       },
    });
+   // filter menu
    function burgerMenu1() {
       const burger = document.querySelector('.filter')
       const menu = document.querySelector('.pokedex__accordion')
@@ -267,10 +269,11 @@ if (document.querySelector('.body__pokedex')) {
       })
    }
    burgerMenu1();
-
+   // modal
    var modal = document.getElementsByClassName('modal__wrapper');
    var btn = document.getElementsByClassName("slide");
    var span = document.getElementsByClassName("modal__close");
+   // slide 1
    btn[0].onclick = function () {
       modal[0].style.display = "flex";
    }
@@ -298,7 +301,7 @@ if (document.querySelector('.body__pokedex')) {
    btn[8].onclick = function () {
       modal[8].style.display = "flex";
    }
-
+   // slide 2
    btn[9].onclick = function () {
       modal[0].style.display = "flex";
    }
@@ -326,7 +329,7 @@ if (document.querySelector('.body__pokedex')) {
    btn[17].onclick = function () {
       modal[8].style.display = "flex";
    }
-
+   // slide 3
    btn[18].onclick = function () {
       modal[0].style.display = "flex";
    }
@@ -355,7 +358,7 @@ if (document.querySelector('.body__pokedex')) {
       modal[8].style.display = "flex";
    }
 
-
+   // all slidea
    span[0].onclick = function () {
       modal[0].style.display = "none";
    }
@@ -383,7 +386,7 @@ if (document.querySelector('.body__pokedex')) {
    span[8].onclick = function () {
       modal[8].style.display = "none";
    }
-
+   // all area click
    window.onclick = function (event) {
       if (event.target == modal[0]) {
          modal[0].style.display = "none";
