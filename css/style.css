@@ -309,8 +309,8 @@ header .start__btn:hover {
 .legend .swiper__btns {
   height: 50px;
   position: absolute;
-  left: -70px;
-  right: -70px;
+  left: -50px;
+  right: -50px;
   bottom: 50px;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
@@ -1569,6 +1569,10 @@ li {
     gap: 30px;
   }
 
+  header .section__start {
+    padding: 128px 0;
+  }
+
   header .start {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1962,8 +1966,18 @@ li {
   }
 
   .pokedex__swiper .swiper-slide {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 24px;
   }
 
   .pokedex__swiper .swiper-slide .slide {
@@ -1971,8 +1985,7 @@ li {
   }
 
   .pokedex__swiper .slide {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 350px;
   }
 
   .modal__wrapper {
@@ -1996,7 +2009,7 @@ li {
 
   .modal__wrapper .modal__close {
     right: 10px;
-    top: 30px;
+    top: 10px;
     z-index: 10101;
   }
 
@@ -2182,6 +2195,24 @@ li {
 @media (max-width: 350px) {
   .legend .swiper-small {
     width: 70%;
+  }
+
+  .pokedex__swiper .slide__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .modal__wrapper .modal__close {
+    width: 23px;
+  }
+
+  .modal__wrapper .modal__close img {
+    width: 100%;
+    height: auto;
   }
 
   .modal__wrapper .modal__points {

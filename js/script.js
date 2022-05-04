@@ -99,16 +99,16 @@ if (document.querySelector('.body__legend')) {
       watchSlidesProgress: true,
       loop: !0,
       breakpoints: {
-         993: {
+         1138: {
             slidesPerView: 6,
          },
-         768: {
+         992: {
             slidesPerView: 5,
          },
-         650: {
+         768: {
             slidesPerView: 4,
          },
-         500: {
+         650: {
             slidesPerView: 3,
          },
          350: {
@@ -137,16 +137,16 @@ if (document.querySelector('.body__legend')) {
       watchSlidesProgress: true,
       loop: !0,
       breakpoints: {
-         993: {
+         1138: {
             slidesPerView: 6,
          },
-         768: {
+         992: {
             slidesPerView: 5,
          },
-         650: {
+         768: {
             slidesPerView: 4,
          },
-         500: {
+         650: {
             slidesPerView: 3,
          },
          350: {
@@ -175,16 +175,16 @@ if (document.querySelector('.body__legend')) {
       watchSlidesProgress: true,
       loop: !0,
       breakpoints: {
-         993: {
+         1138: {
             slidesPerView: 6,
          },
-         768: {
+         992: {
             slidesPerView: 5,
          },
-         650: {
+         768: {
             slidesPerView: 4,
          },
-         500: {
+         650: {
             slidesPerView: 3,
          },
          350: {
